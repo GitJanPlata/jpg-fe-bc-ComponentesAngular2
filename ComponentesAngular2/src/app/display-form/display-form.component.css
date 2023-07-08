@@ -1,0 +1,32 @@
+table {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 2em;
+    border-collapse: collapse;
+  }
+  
+  table thead {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  table, th, td {
+    border: 1px solid #343a40;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  td {
+    background-color: #f8f9fa;
+  }
+  
+  th {
+    background-color: #343a40;
+    color: white;
+  }
+  h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 1em;
+  }
+  

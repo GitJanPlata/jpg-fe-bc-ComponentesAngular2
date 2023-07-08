@@ -1,0 +1,28 @@
+<h1>Formulario de contacto</h1>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="needs-validation" >
+    <div class="mb-3">
+    <label for="name" class="form-label"><b>Nombre</b></label>
+    <input type="text" formControlName="name" required placeholder="Nombre y apellido" class="form-control" id="name">
+    <p *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">Introduzca su nombre y apellido.</p>
+    </div>
+
+    <div class="mb-3">
+    <label for="email" class="form-label"><b>Email</b></label>
+    <input type="email" formControlName="email" required placeholder="email@mail.com" class="form-control" id="email">
+    <p *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">Introduzca un email valido.</p>
+    </div>
+
+    <div class="mb-3">
+    <label for="message" class="form-label"><b>Mensaje</b></label>
+    <textarea formControlName="message" required class="form-control" id="message"></textarea>
+    <p *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">Introduzca su Mensaje.</p>
+    </div>
+
+    <div class="mb-3">
+    <label for="validation" class="form-label"><b>2 + 3 = ?</b></label>
+    <input type="text" formControlName="validation" required placeholder="Respuesta" class="form-control" id="validation">
+    <p *ngIf="contactForm.get('validation')?.invalid && contactForm.get('validation')?.touched">Validación anti-spam incorrecta.</p>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
